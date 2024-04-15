@@ -1,0 +1,314 @@
+/* Color scheme */
+:root {
+  --primary-color: #2C3E50;
+  /* Dark blue */
+  --secondary-color: #18BC9C;
+  /* Teal */
+  --accent-color: #E74C3C;
+  /* Red */
+  --background-color: #ECF0F1;
+  /* Light grey */
+  --text-color: #333;
+  /* Dark grey */
+}
+
+/* Reset default browser styles */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply Bebas Neue font to titles only */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  /* Optional: set the desired font weight */
+  font-style: normal;
+  /* Optional: set the desired font style */
+}
+
+
+/* Create an iridescent, holographic-style background */
+body {
+  background: linear-gradient(45deg,
+      #f3a9dc,
+      /* Pastel pink */
+      #fce7e1,
+      /* Light coral */
+      #d4a5e8,
+      /* Soft lavender */
+      #afe6f0,
+      /* Light aqua */
+      #b4f5c6,
+      /* Pastel green */
+      #f3a9dc
+      /* Repeat pastel pink */
+    );
+  background-size: 400% 400%;
+  /* Adjust the size of the gradient */
+  animation: iridescent 20s ease-in-out infinite;
+  /* Animation to shift colors over time */
+}
+
+/* Define the animation to shift the colors */
+@keyframes iridescent {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  25% {
+    background-position: 100% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  75% {
+    background-position: 0% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+
+/* Header styles */
+header {
+  /* background-color: #333; */
+  color: transparent;
+  padding: 10px 20px;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+
+
+/* Navigation bar styles */
+nav {
+  background-color: transparent;
+  /* Set the navigation bar color to the same as the background */
+  /* border-bottom: 3px solid #333; */
+  /* Add a thin black line at the bottom for separation */
+  padding: 10px 20px;
+  /* Add padding for better spacing */
+  border: none;
+  /* Remove any border from the navigation bar */
+  box-shadow: none;
+  /* Remove any shadow */
+}
+
+nav ul.nav-bar {
+  display: flex;
+  /* Display the list items in a row */
+  justify-content: space-between;
+  /* Distribute space between items */
+  list-style: none;
+  /* Remove bullet points */
+  padding: 0;
+  /* Remove padding */
+  margin: 0;
+  /* Remove margin */
+  background-color: transparent;
+  /* Make the navigation bar transparent */
+}
+
+nav ul.nav-bar li {
+  padding: 10px 20px;
+  /* Add padding around the links */
+}
+
+nav ul.nav-bar li a {
+  color: black;
+  /* Set link color to dark grey */
+  text-decoration: none;
+  /* Remove underline from links */
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 25px;
+}
+
+nav ul.nav-bar li a:hover {
+  color: white;
+  /* Change color on hover */
+}
+
+
+.right-nav {
+  display: flex;
+  /* Display the items in a row */
+}
+
+#animatedText {
+  font-family: 'Source Code Pro', sans-serif;
+  /* Change 'YourFontFamily' to the desired font family */
+  /* font-size: 1.5em; */
+  /* Change the font size as desired */
+  /* font-weight: bold; */
+  /* Adjust the font weight as desired */
+  color: black;
+  /* Adjust the text color as desired */
+  /* Add other properties such as text-shadow, letter-spacing, etc., as desired */
+}
+
+p {
+  font-family: 'Source Code Pro', sans-serif;
+  /* Change 'YourChosenFont' to the desired font family */
+  /* font-size: 1.5em; */
+  /* Adjust the font size as desired */
+  /* font-weight: bold; */
+  /* Adjust the font weight as desired */
+  color: black;
+  /* Adjust the text color as desired */
+  /* Add other properties such as text-shadow, letter-spacing, etc., as desired */
+}
+
+
+/* Main content styles */
+main {
+  padding: 20px;
+}
+
+/* Introduction section styles */
+.introduction {
+  text-align: center;
+  /* Center the text */
+  padding: 20px;
+  /* Add padding for better spacing */
+  margin-top: 50px;
+  /* Add margin at the top for separation from the nav bar */
+  margin-bottom: 400px;
+}
+
+.introduction h1 {
+  font-size: 5em;
+  /* Large font size for the heading */
+  margin-bottom: 0px;
+  /* Add space below the heading */
+}
+
+.introduction p {
+  font-size: 1.2em;
+  /* Slightly larger font size for the description */
+  color: black;
+  /* Text color */
+
+}
+
+/* Projects section styles */
+.projects {
+  padding: 20px;
+  /* Add padding for spacing */
+  margin-top: 50px;
+  /* Add margin at the top for separation from the introduction */
+
+}
+
+.projects h2 {
+  font-size: 4em;
+  /* Font size for section title */
+  margin-bottom: 50px;
+  /* Space below the title */
+  text-align: center;
+  /* Center the title */
+}
+
+/* Styles for each project */
+.project {
+  display: flex;
+  /* Display project elements in a row */
+  align-items: flex-start;
+  /* Center align vertically */
+  margin-bottom: 20px;
+  /* Space between projects */
+  margin-left: 100px;
+  /* Add margin to the left of projects */
+}
+
+.project img {
+  width: 500px;
+  /* Width of the project image */
+  height: auto;
+  /* Maintain aspect ratio */
+  margin-right: 20px;
+  /* Space between image and details */
+}
+
+.project-details {
+  flex-grow: 1;
+  /* Allow details to grow and fill available space */
+  /* Align project description with title */
+
+}
+
+/* Styles for each project title */
+.project h3 {
+  font-size: 2.5em;
+  /* Increase the font size of the project title */
+  margin: 0;
+  /* Remove default margin */
+  margin-left: 50px;
+  /* Add space between the title and the picture */
+  position: relative;
+  /* Required for the pseudo-element positioning */
+  display: inline-block;
+  /* Needed for the pseudo-element to work properly */
+}
+
+/* Underline animation on hover */
+.project h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  /* Position the underline at the bottom of the text */
+  left: 0;
+  /* Start the underline from the left */
+  width: 0;
+  /* Initially, the underline width is zero */
+  height: 4px;
+  /* Define the height of the underline */
+  background-color: white;
+  /* Use a color for the underline */
+  transition: width 0.3s ease-in-out;
+  /* Smooth transition */
+}
+
+.project h3:hover::after {
+  width: 100%;
+  /* Expand the underline to the full width of the text */
+}
+
+
+.project p {
+  margin: 5px 0 0;
+  /* Space above paragraph */
+  margin-left: 55px;
+  /* Add space to align with project title */
+}
+
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+}

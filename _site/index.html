@@ -1,9 +1,3 @@
----
-layout: home
-title: Welcome to My Website
-description: This is the main page of my personal website.
----
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,10 +5,10 @@ description: This is the main page of my personal website.
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-  <meta name="description" content="{{ page.description }}">
+  <title>Welcome to My Website</title>
+  <meta name="description" content="This is the main page of my personal website.">
   <!-- Add your CSS links here -->
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -55,7 +49,7 @@ description: This is the main page of my personal website.
       <h2>Projects</h2>
       <!-- Project 1 -->
       <div class="project">
-        <img src="{{ '/assets/files/three_spheres_1024.png' | relative_url }}" alt="Project 1 Image">
+        <img src="/assets/files/three_spheres_1024.png" alt="Project 1 Image">
         <div class="project-details">
           <h3>Ray Tracer</h3>
           <p>Project 1 Description</p>
@@ -64,7 +58,7 @@ description: This is the main page of my personal website.
 
       <!-- Project 2 -->
       <div class="project">
-        <img src="{{ '/assets/files/scheduler-concept-glossy.png' | relative_url }}" alt="Project 2 Image">
+        <img src="/assets/files/scheduler-concept-glossy.png" alt="Project 2 Image">
         <div class="project-details">
           <h3>Scheduler</h3>
           <p>Project 2 Description</p>
@@ -83,7 +77,7 @@ description: This is the main page of my personal website.
     <p>&copy; 2024 Elizabeth Kelmenson. All rights reserved.</p>
   </footer>
 
-  <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+  <script src="/assets/js/script.js"></script>
 
 </body>
 
