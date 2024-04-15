@@ -86,6 +86,7 @@ projectsLink.addEventListener('click', function (event) {
 
 
 
+
 // // Function to type and erase text
 // function typeAndEraseText() {
 //   const currentText = texts[currentTextIndex];
