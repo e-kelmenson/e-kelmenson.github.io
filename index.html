@@ -23,6 +23,17 @@ description: This is the main page of my personal website.
   <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
     rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Teko:wght@300..700&display=swap"
+    rel="stylesheet">
 
 
 </head>
@@ -45,7 +56,7 @@ description: This is the main page of my personal website.
 
   <main>
     <div class="introduction">
-      <h1>Hi, I'm Elizabeth</h1>
+      <h1>&lt;Hi, I'm Elizabeth&gt;</h1>
       <p>I am <span id="animatedText"></span></p>
     </div>
 
@@ -58,23 +69,60 @@ description: This is the main page of my personal website.
 
     <section class="projects" id="projects">
       <h2>Projects</h2>
+
+
+
+
       <!-- Project 1 -->
       <div class="project">
-        <img src="{{ '/assets/files/three_spheres_1024.png' | relative_url }}" alt="Project 1 Image">
+        <img src="{{ '/assets/files/Scheduling.png' | relative_url }}" alt="Project 2 Image">
         <div class="project-details">
-          <h3>Ray Tracer</h3>
-          <p>Project 1 Description</p>
+          <h3>Scheduler</h3>
+          <p>A productivity application that manages your events, calendar, to-do lists, and helps coordinate with
+            teams.
+          </p>
+          <div class="language-tag">OCaml</div>
         </div>
-
       </div>
 
       <!-- Project 2 -->
       <div class="project">
-        <img src="{{ '/assets/files/scheduler-concept-glossy.png' | relative_url }}" alt="Project 2 Image">
+        <img src="{{ '/assets/files/EmbeddedSystems.png' | relative_url }}" alt="Project 2 Image">
         <div class="project-details">
-          <h3>Scheduler</h3>
-          <p>Project 2 Description</p>
+          <h3>Embedded Systems Textbook</h3>
+          <p>An informal textbook that breaks down the content in Embedded Systems so that it is easy to understand.</p>
         </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project">
+        <img src="{{ '/assets/files/Week03DeepLearning.png' | relative_url }}" alt="Project 2 Image">
+        <div class="project-details">
+          <h3>CS 4786</h3>
+          <p>Developed the module on Attention, Transformers, and LLMs for the Introduction to Deep Learning course at
+            Cornell University.</p>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project">
+        <img src="{{ '/assets/files/three_spheres_edited.png' | relative_url }}" alt="Project 1 Image">
+        <div class="project-details">
+          <h3>Ray Tracer</h3>
+          <p>Project 4 Description</p>
+          <div class="language-tag">Python</div>
+        </div>
+
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project">
+        <img src="{{ '/assets/files/CUAUV_video_cropped.png' | relative_url }}" alt="Project 1 Image">
+        <div class="project-details">
+          <h3>CUAUV Competition Video</h3>
+          <p>Project 5 Description</p>
+        </div>
+
       </div>
 
       <!-- Add more projects as needed -->

@@ -30,7 +30,11 @@ li {
 }
 
 /* Apply Bebas Neue font to titles only */
-h1,
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 600;
+}
+
 h2,
 h3,
 h4,
@@ -98,6 +102,7 @@ header {
 }
 
 header h1 {
+  font-family: 'Space Mono', monospace;
   font-size: 24px;
 }
 
@@ -143,7 +148,7 @@ nav ul.nav-bar li a {
   text-decoration: none;
   /* Remove underline from links */
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 nav ul.nav-bar li a:hover {
@@ -199,7 +204,7 @@ main {
 }
 
 .introduction h1 {
-  font-size: 5em;
+  font-size: 6em;
   /* Large font size for the heading */
   margin-bottom: 0px;
   /* Add space below the heading */
@@ -244,9 +249,9 @@ main {
 }
 
 .projects h2 {
-  font-size: 4em;
+  font-size: 5em;
   /* Font size for section title */
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   /* Space below the title */
   text-align: center;
   /* Center the title */
@@ -258,18 +263,18 @@ main {
   /* Display project elements in a row */
   align-items: flex-start;
   /* Center align vertically */
-  margin-bottom: 20px;
+  margin-bottom: 100px;
   /* Space between projects */
   margin-left: 100px;
   /* Add margin to the left of projects */
 }
 
 .project img {
-  width: 500px;
+  width: 600px;
   /* Width of the project image */
   height: auto;
   /* Maintain aspect ratio */
-  margin-right: 20px;
+  margin-right: 50px;
   /* Space between image and details */
 }
 
@@ -282,7 +287,7 @@ main {
 
 /* Styles for each project title */
 .project h3 {
-  font-size: 2.5em;
+  font-size: 3em;
   /* Increase the font size of the project title */
   margin: 0;
   /* Remove default margin */
@@ -319,10 +324,37 @@ main {
 
 
 .project p {
-  margin: 5px 0 0;
+  margin: 10px 0 0;
   /* Space above paragraph */
-  margin-left: 55px;
+  margin-left: 50px;
   /* Add space to align with project title */
+  margin-right: 50px;
+}
+
+.language-tag {
+  display: inline-block;
+  /* Ensures the tag wraps around the text */
+  font-family: "Source Code Pro", sans-serif;
+  background-color: transparent;
+  /* Gray background color */
+  color: #000000;
+  /* Text color */
+  border-radius: 15px;
+  /* Rounded corners */
+  border: 1px solid #000000;
+  /* Border: 1px width, solid style, color of your choice */
+  padding: 5px 10px;
+  /* Padding for spacing around the text */
+  border-radius: 15px;
+  /* Rounded corners */
+  font-size: 14px;
+  /* Font size */
+  margin-left: 50px;
+  margin-top: 50px;
+  margin-right: 5px;
+  /* Optional spacing between multiple tags */
+  margin-bottom: 10px;
+  /* Optional spacing below the tag */
 }
 
 
