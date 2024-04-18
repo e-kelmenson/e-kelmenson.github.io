@@ -27,6 +27,7 @@ li {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 /* Apply Bebas Neue font to titles only */
@@ -218,6 +219,20 @@ main {
 
 }
 
+/* Initial state */
+.intro-text {
+  opacity: 0;
+  transform: translateX(-10%);
+}
+
+/* Animation state */
+.intro-text.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 1.5s cubic-bezier(0.21, 1.11, 0.81, 0.99), opacity 1.5s cubic-bezier(0.21, 1.11, 0.81, 0.99);
+}
+
+
 .design-container {
   display: flex;
   /* Use Flexbox for centering */
@@ -243,6 +258,8 @@ main {
 .projects {
   padding: 20px;
   /* Add padding for spacing */
+  margin-left: 100px;
+  margin-right: 100px;
   margin-top: 50px;
   /* Add margin at the top for separation from the introduction */
 
@@ -257,6 +274,15 @@ main {
   /* Center the title */
 }
 
+/* Target the anchor element within the project class */
+.project h3 a {
+  color: inherit;
+  /* Inherit the color from the parent element */
+  text-decoration: none;
+  /* Remove underline */
+}
+
+
 /* Styles for each project */
 .project {
   display: flex;
@@ -265,8 +291,26 @@ main {
   /* Center align vertically */
   margin-bottom: 100px;
   /* Space between projects */
-  margin-left: 100px;
+  /* margin-left: 100px; */
+  /* margin-left: 100px; */
   /* Add margin to the left of projects */
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+/* Fade-in animation when a project is in view */
+.project.visible {
+  opacity: 1;
+}
+
+/* Odd projects (left-aligned) */
+.project:nth-child(odd) {
+  flex-direction: row;
+}
+
+/* Even projects (right-aligned) */
+.project:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
 .project img {
@@ -357,6 +401,66 @@ main {
   /* Optional spacing below the tag */
 }
 
+/* Contact section styles */
+.contact {
+  max-width: 600px;
+  /* Adjust this value as needed to control the width of the contact section */
+  margin: 0 auto;
+  /* Center the contact section within its parent container */
+  padding: 20px;
+  /* Optional padding around the contact form */
+  background-color: #f9f9f9;
+  /* Background color of the contact section */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Optional shadow for the section */
+  margin-bottom: 50px;
+}
+
+/* Style for centering the heading in the contact section */
+.contact h2 {
+  text-align: center;
+  /* This will center the heading */
+}
+
+
+/* Form styles */
+form {
+  max-width: 450px;
+  /* Adjust the form width as needed */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  font-family: "Source Code Pro", sans-serif;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: black;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: "Source Code Pro", sans-serif;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
 
 
 

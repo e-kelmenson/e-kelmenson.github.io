@@ -1,3 +1,14 @@
+document.addEventListener('DOMContentLoaded', function () {
+  // Get the intro-text element
+  const introText = document.querySelector('.intro-text');
+
+  // Add the slide-in class to trigger the CSS animation
+  if (introText) {
+    introText.classList.add('slide-in');
+  }
+});
+
+
 // Array of texts you want to cycle through
 const texts = [
   "a computer science student at Cornell University.",
@@ -82,6 +93,56 @@ projectsLink.addEventListener('click', function (event) {
   });
 });
 
+// Select all project elements
+const projects = document.querySelectorAll('.project');
+
+// Callback function for Intersection Observer
+function handleIntersect(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      // Stop observing the element once it is visible
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+// Create a new Intersection Observer
+const observer = new IntersectionObserver(handleIntersect, {
+  root: null, // Observing within the entire document
+  rootMargin: '0px',
+  threshold: 0.1 // Trigger callback when 10% of the element is in view
+});
+
+// Observe each project element
+projects.forEach(project => {
+  observer.observe(project);
+});
+
+
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent the form from submitting normally
+
+  // Collect form data
+  const formData = new FormData(this);
+
+  // Send form data to your server or form submission service
+  fetch('/your-form-submission-endpoint', {
+    method: 'POST',
+    body: formData,
+  })
+    .then(response => {
+      if (response.ok) {
+        alert('Message sent successfully!');
+        this.reset(); // Clear the form fields
+      } else {
+        alert('Error sending message.');
+      }
+    })
+    .catch(error => {
+      alert('Error sending message: ' + error.message);
+    });
+});
 
 
 

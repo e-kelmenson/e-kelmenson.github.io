@@ -56,7 +56,7 @@ description: This is the main page of my personal website.
 
   <main>
     <div class="introduction">
-      <h1>&lt;Hi, I'm Elizabeth&gt;</h1>
+      <h1 class="intro-text">&lt;Hi, I'm Elizabeth&gt;</h1>
       <p>I am <span id="animatedText"></span></p>
     </div>
 
@@ -90,7 +90,8 @@ description: This is the main page of my personal website.
         <img src="{{ '/assets/files/EmbeddedSystems.png' | relative_url }}" alt="Project 2 Image">
         <div class="project-details">
           <h3>Embedded Systems Textbook</h3>
-          <p>An informal textbook that breaks down the content in Embedded Systems so that it is easy to understand.</p>
+          <p>An informal 50-page textbook that breaks down the content from Embedded Systems so it is easy to
+            understand.</p>
         </div>
       </div>
 
@@ -109,7 +110,7 @@ description: This is the main page of my personal website.
         <img src="{{ '/assets/files/three_spheres_edited.png' | relative_url }}" alt="Project 1 Image">
         <div class="project-details">
           <h3>Ray Tracer</h3>
-          <p>Project 4 Description</p>
+          <p>A ray tracing algorithm that can render simple scenes.</p>
           <div class="language-tag">Python</div>
         </div>
 
@@ -119,8 +120,9 @@ description: This is the main page of my personal website.
       <div class="project">
         <img src="{{ '/assets/files/CUAUV_video_cropped.png' | relative_url }}" alt="Project 1 Image">
         <div class="project-details">
-          <h3>CUAUV Competition Video</h3>
-          <p>Project 5 Description</p>
+          <h3><a href="https://www.youtube.com/watch?v=MHbx6O4d1GA&ab_channel=ElizabethKelmenson" target="_blank">CUAUV
+              Competition Video</a></h3>
+          <p>Led a project to create CUAUV's competition video for RoboSub.</p>
         </div>
 
       </div>
@@ -128,14 +130,32 @@ description: This is the main page of my personal website.
       <!-- Add more projects as needed -->
     </section>
 
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject">
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Send</button>
+      </form>
+    </section>
 
 
   </main>
 
-  <footer>
-    <!-- Add footer content here -->
-    <p>&copy; 2024 Elizabeth Kelmenson. All rights reserved.</p>
-  </footer>
 
   <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
 
