@@ -119,6 +119,37 @@ projects.forEach(project => {
   observer.observe(project);
 });
 
+// Get the dropdown menu links
+const dropdownLinks = document.querySelectorAll('.dropdown-menu li a');
+// const projects = document.querySelectorAll('.project');
+
+// Function to filter projects
+function filterProjects(category) {
+  projects.forEach(project => {
+    const projectCategory = project.getAttribute('data-category');
+
+    // Show or hide projects based on the filter
+    if (category === 'all' || projectCategory === category) {
+      project.style.display = 'flex';
+    } else {
+      project.style.display = 'none';
+    }
+  });
+}
+
+// Add click event listener to each dropdown link
+dropdownLinks.forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const filterCategory = link.getAttribute('data-filter');
+    filterProjects(filterCategory);
+  });
+});
+
+// Initialize the filter to show all projects by default
+filterProjects('all');
+
+
 
 document.getElementById('contactForm').addEventListener('submit', function (event) {
   event.preventDefault(); // Prevent the form from submitting normally
@@ -148,34 +179,6 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 
 
 
-// // Function to type and erase text
-// function typeAndEraseText() {
-//   const currentText = texts[currentTextIndex];
-
-//   if (isErasing) {
-//     // Erasing the text
-//     if (charIndex > 0) {
-//       charIndex--;
-//       animatedText.textContent = currentText.substring(0, charIndex);
-//       timeout = setTimeout(typeAndEraseText, erasingSpeed);
-//     } else {
-//       isErasing = false;
-//       currentTextIndex = (currentTextIndex + 1) % texts.length;
-//       setTimeout(typeAndEraseText, typingSpeed);
-//     }
-//   } else {
-//     // Typing the text
-//     if (charIndex < currentText.length) {
-//       animatedText.textContent = currentText.substring(0, charIndex + 1);
-//       charIndex++;
-//       timeout = setTimeout(typeAndEraseText, typingSpeed);
-//     } else {
-//       // Finished typing, wait before erasing
-//       isErasing = true;
-//       setTimeout(typeAndEraseText, displayTime);
-//     }
-//   }
-// }
 
 // Start the typing animation when the page loads
 document.addEventListener('DOMContentLoaded', () => {

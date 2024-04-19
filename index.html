@@ -70,11 +70,18 @@ description: This is the main page of my personal website.
     <section class="projects" id="projects">
       <h2>Projects</h2>
 
-
-
+      <!-- Filter Button-->
+      <div class="filter-container">
+        <button class="filter-btn">Filter</button>
+        <ul class="dropdown-menu">
+          <li><a href="#" data-filter="technical">Technical</a></li>
+          <li><a href="#" data-filter="non-technical">Non-technical</a></li>
+          <li><a href="#" data-filter="all">All</a></li>
+        </ul>
+      </div>
 
       <!-- Project 1 -->
-      <div class="project">
+      <div class="project" data-category="technical">
         <img src="{{ '/assets/files/Scheduling.png' | relative_url }}" alt="Project 2 Image">
         <div class="project-details">
           <h3>Scheduler</h3>
@@ -86,17 +93,17 @@ description: This is the main page of my personal website.
       </div>
 
       <!-- Project 2 -->
-      <div class="project">
+      <div class="project" data-category="technical">
         <img src="{{ '/assets/files/EmbeddedSystems.png' | relative_url }}" alt="Project 2 Image">
         <div class="project-details">
-          <h3>Embedded Systems Textbook</h3>
+          <h3><a href="/assets/files/Embedded_Systems.pdf">Embedded Systems Textbook</a></h3>
           <p>An informal 50-page textbook that breaks down the content from Embedded Systems so it is easy to
             understand.</p>
         </div>
       </div>
 
       <!-- Project 3 -->
-      <div class="project">
+      <div class="project" data-category="technical">
         <img src="{{ '/assets/files/Week03DeepLearning.png' | relative_url }}" alt="Project 2 Image">
         <div class="project-details">
           <h3>CS 4786</h3>
@@ -106,7 +113,7 @@ description: This is the main page of my personal website.
       </div>
 
       <!-- Project 4 -->
-      <div class="project">
+      <div class="project" data-category="technical">
         <img src="{{ '/assets/files/three_spheres_edited.png' | relative_url }}" alt="Project 1 Image">
         <div class="project-details">
           <h3>Ray Tracer</h3>
@@ -117,7 +124,7 @@ description: This is the main page of my personal website.
       </div>
 
       <!-- Project 5 -->
-      <div class="project">
+      <div class="project" data-category="non-technical">
         <img src="{{ '/assets/files/CUAUV_video_cropped.png' | relative_url }}" alt="Project 1 Image">
         <div class="project-details">
           <h3><a href="https://www.youtube.com/watch?v=MHbx6O4d1GA&ab_channel=ElizabethKelmenson" target="_blank">CUAUV
@@ -127,9 +134,21 @@ description: This is the main page of my personal website.
 
       </div>
 
+      <!-- Project 6 -->
+      <div class="project" data-category="non-technical">
+        <img src="{{ '/assets/files/fiora.png' | relative_url }}" alt="Project 1 Image">
+        <div class="project-details">
+          <h3><a href="/assets/files/EKelmenson_Fiora.pdf">Mythic Quest Spec Script</a></h3>
+          <p>An original half-hour comedy spec script for Mythic Quest on Apple TV.</p>
+        </div>
+
+      </div>
+
       <!-- Add more projects as needed -->
     </section>
 
+
+    <!-- Contact Section-->
     <section class="contact">
       <h2>Contact Me</h2>
       <form id="contactForm">
