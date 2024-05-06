@@ -677,3 +677,8 @@ footer {
 .scheduler-fsm img {
   max-width: 60%;
 }
+
+
+.no-anchor .anchorjs-link {
+    display: none;
+}
