@@ -1,2 +1,4 @@
 markdown: GFM
 title: ''
+exclude:
+  - assets/javascript/anchor-js
