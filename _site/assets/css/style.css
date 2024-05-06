@@ -48,9 +48,24 @@ h6 {
   /* Optional: set the desired font style */
 }
 
+.nav-container {
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(2.5px);
+  /* opacity: 0.5; */
+  /* background-color: inherit; */
+  /* Animation to shift colors over time */
+  /* opacity: 0.8;      */
+  box-shadow:0px 10px 50px 0.2px rgba(2, 0, 30, 0.463);
+  z-index: 99;
+}
+
+
+
 
 /* Create an iridescent, holographic-style background */
 body {
+  /* overflow-x: hidden; */
   background: linear-gradient(45deg,
       #f3a9dc,
       /* Pastel pink */
@@ -69,6 +84,9 @@ body {
   /* Adjust the size of the gradient */
   animation: iridescent 20s ease-in-out infinite;
   /* Animation to shift colors over time */
+
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 /* Define the animation to shift the colors */
@@ -205,6 +223,7 @@ main {
 }
 
 .introduction h1 {
+  margin-top: 150px;
   font-size: 6em;
   /* Large font size for the heading */
   margin-bottom: 0px;
@@ -321,6 +340,9 @@ main {
   margin-right: 100px;
   margin-top: 50px;
   /* Add margin at the top for separation from the introduction */
+  /* width: 100%;
+  gap: 10px; */
+  overflow: hidden;
 
 }
 
@@ -346,6 +368,8 @@ main {
 .project {
   display: flex;
   /* Display project elements in a row */
+  width: 100%;
+  gap: 10px;
   align-items: flex-start;
   /* Center align vertically */
   margin-bottom: 100px;
@@ -372,13 +396,15 @@ main {
   flex-direction: row-reverse;
 }
 
+
 .project img {
   width: 600px;
   /* Width of the project image */
-  height: auto;
+  height: 400px;
   /* Maintain aspect ratio */
-  margin-right: 50px;
+  /* margin-right: 50px; */
   /* Space between image and details */
+  object-fit: fill;
 }
 
 .project-details {
@@ -460,6 +486,47 @@ main {
   /* Optional spacing below the tag */
 }
 
+
+/* Interests section styles */
+/* Interests Section Styles */
+.interests {
+  padding: 20px;
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.section-title h2 {
+  font-size: 5em;
+  margin-bottom: 50px;
+}
+
+.interests-grid {
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr);  */
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(200px, auto); /* Set minimum row height */
+  grid-gap: 50px; /* Adjust the gap between grid items */
+  justify-items: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+.interest {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.interest img {
+  max-width: 100%; /* Ensure images don't exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+
+  max-width: 500px; /* Set the maximum width of each image */
+  height: auto; /* Automatically adjust the height to maintain aspect ratio */
+}
+
+
 /* Contact section styles */
 .contact {
   max-width: 600px;
@@ -531,4 +598,81 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px 20px;
+}
+
+
+.scheduler-title {
+  width: 100vw;
+  font-size: 24px;
+
+  position: relative;
+  /* left: 50%; */
+  top: 200px;
+  /* margin: auto; */
+  /* margin-top: 100px; */
+  margin-bottom: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* New page */
+.scheduler-img {
+  margin: auto;
+  margin-bottom: 50px;
+
+  width: 60vw;
+  overflow: hidden;
+  /* object-fit: scale-down; */
+}
+
+.scheduler-img > img {
+  margin-top: 200px;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.project-description {
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 19px; /* Adjust the font size as needed */
+  line-height: 1.6; /* Increase line height for better readability */
+  max-width: 60vw; /* Set a maximum width for the text */
+  margin: auto; /* Center align the text horizontally */
+  padding: 20px 0; /* Add vertical padding for spacing */
+}
+
+.project-description p {
+  margin-bottom: 50px; /* Add space between paragraphs */
+}
+
+.centered-img {
+  text-align: center; /* Center align the image */
+  margin: 30px 0; /* Add margin around the centered image */
+}
+/* Adjust the image width as needed */
+
+.brainstorm-sketch > img,
+.scheduler-ui img,
+.scheduler-interface img,
+.scheduler-fsm img {
+  max-width: 90%; /* Ensure the image does not exceed its container width */
+  height: auto; /* Maintain the aspect ratio of the image */
+  display: block; /* Ensure the image behaves as a block element */
+  margin: auto; /* Center align the image horizontally */
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.scheduler-ui img {
+  max-width: 50%;
+}
+
+.scheduler-interface img {
+  max-width: 50%;
+}
+
+.scheduler-fsm img {
+  max-width: 60%;
 }

@@ -75,6 +75,10 @@ function typeAndEraseText() {
     }
   }
 }
+// Start the typing animation when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+  typeAndEraseText();
+});
 
 // Get the "Projects" link in the navigation bar
 const projectsLink = document.querySelector('a[href="/projects"]');
@@ -180,7 +184,61 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 
 
 
-// Start the typing animation when the page loads
-document.addEventListener('DOMContentLoaded', () => {
-  typeAndEraseText();
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const imageElement = document.getElementById('cooking');
+  const imageSources = ['/assets/files/ramen-web.png', '/assets/files/danish-web.png', '/assets/files/curry-web.png', '/assets/files/eggplant-web.png'];
+  let currentIndex = 0;
+
+  function cycleImages() {
+    currentIndex = (currentIndex + 1) % imageSources.length;
+    imageElement.src = imageSources[currentIndex];
+  }
+
+  // Change image every 3 seconds (3000 milliseconds)
+  setInterval(cycleImages, 3000);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const imageElement = document.getElementById('cats');
+  const imageSources = ['/assets/files/moo-web.png', '/assets/files/hoarding-web.png', '/assets/files/pepper-web.png'];
+  let currentIndex = 0;
+
+  function cycleImages() {
+    currentIndex = (currentIndex + 1) % imageSources.length;
+    imageElement.src = imageSources[currentIndex];
+  }
+
+  // Change image every 3 seconds (3000 milliseconds)
+  setInterval(cycleImages, 3000);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const imageElement = document.getElementById('hiking');
+  const imageSources = ['/assets/files/hiking1-web.png', '/assets/files/hiking2-web.png', '/assets/files/hiking3-web.png', '/assets/files/hiking4-web.png', '/assets/files/hiking5-web.png', '/assets/files/hiking6-web.png', '/assets/files/hiking7-web.png', '/assets/files/hiking8-web.png'];
+  let currentIndex = 0;
+
+  function cycleImages() {
+    currentIndex = (currentIndex + 1) % imageSources.length;
+    imageElement.src = imageSources[currentIndex];
+  }
+
+  // Change image every 3 seconds (3000 milliseconds)
+  setInterval(cycleImages, 3000);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const imageElement = document.getElementById('blender');
+  const imageSources = ['/assets/files/blender-web.png', '/assets/files/blender2-web.png'];
+  let currentIndex = 0;
+
+  function cycleImages() {
+    currentIndex = (currentIndex + 1) % imageSources.length;
+    imageElement.src = imageSources[currentIndex];
+  }
+
+  // Change image every 3 seconds (3000 milliseconds)
+  setInterval(cycleImages, 3000);
 });

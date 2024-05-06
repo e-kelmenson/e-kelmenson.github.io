@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to My Website</title>
+  <meta name="description" content="This is the main page of my personal website.">
+  <!-- Add your CSS links here -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Teko:wght@300..700&display=swap"
+    rel="stylesheet">
+
+
+</head>
+
+
+<body>
+  <header class="nav-container">
+    <nav>
+      <ul class="nav-bar">
+        <li><a href="/">Home</a></li>
+        <div class="right-nav">
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="https://github.com/e-kelmenson">GitHub</a></li>
+          <li><a href="/assets/files/EKelmenson_Resume2024.pdf">Resume</a></li>
+        </div>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="scheduler-title">
+    <h1>Scheduler</h1>
+  </div>
+  
+
+  <div class="scheduler-img">
+        <img src="/assets/files/Scheduling.png" alt="Project 2 Image">
+  </div>
+
+ <div class="project-description">
+    <p>
+      As a student, one of my biggest struggles is managing all the work I have to do in different classes. 
+      I was looking through the app store for the perfect planner app, but none of them were what I was picturing. 
+      So, I decided to build my own scheduler program in OCaml with two other students.
+    </p>
+
+    <p>
+      I started by thinking about my perspective as a user. I began brainstorming everything I would want 
+      in a productivity application, and sketched out my ideas.
+    </p>
+
+    <div class="brainstorm-sketch">
+      <img src="/assets/files/schedulerideas.jpg" alt="Brainstorm Sketches">
+    </div>
+
+    <p>
+      I drew up an interface of what my app would look like in an ideal world, just for fun. 
+      At the basic level, the interface is simple. You can add tasks, and view your tasks list. 
+    </p>
+
+    <div class="scheduler-ui">
+      <img src="/assets/files/scheduler-concept-glossy.png" alt="Fancy UI">
+    </div>
+
+    <p>
+      Once there was a task list, ideally the program could help the user determine which order to complete their tasks in. 
+    </p>
+
+    <p>
+      As I continued imagining my product, I added more features to fit my needs as a student. 
+      As a member of a project team, we often have a bunch of tasks that we need to delegate to different members. 
+      These tasks have to be assigned fairly, while respecting pre-existing time commitments. 
+      The next feature I decided to add was a task assignment feature for teams.
+    </p>
+
+    <p>
+      Another issue I face working with my project team is that everyone has busy schedules, 
+      so it can be hard to find times to meet. I decided to add a feature that finds a set of 
+      potential meeting times for a group of people. 
+    </p>
+
+    <p>
+      At this point, I decided to add a feature for events as well. 
+      Students often have to manage their time to complete their assignments and also attend 
+      things like office hours and review sessions. These events have a clear start and end time 
+      unlike tasks.
+    </p>
+
+    <p>
+      Within my group, I took on the responsibility of planning the overall structure of our project. 
+      I broke down the big picture idea into the features available to the user, which determined 
+      the modules we would need to create, and their interfaces. 
+    </p>
+
+    <p>
+      To start, our user interface would be the command line. I would allow for the user to enter 
+      different modes corresponding to the different functionalities described above. 
+      Formally, I specified three modes: Task Scheduler, Event Scheduler, and Groups, 
+      along with an initial state the user would start in.
+    </p>
+
+    <div class="scheduler-interface">
+      <img src="/assets/files/scheduler-interface.jpg" alt="Interface">
+    </div>
+
+    <p>
+      At this stage of planning, I determined all of the different commands tentatively available 
+      to the user. This established how they could switch between different modes, and use the 
+      different features within each mode.
+    </p>
+
+    <div class="scheduler-fsm">
+      <img src="/assets/files/scheduler-fsm.png" alt="FSM">
+    </div>
+
+    <p>
+      At this point, once I developed specifications for each of the modules, I could 
+      split the work with my team members and begin implementation.
+    </p>
+
+    <p>
+      To be continued...
+    </p>
+
+  </div>
+
+
+  <script src="/assets/js/script.js"></script>
+
+</body>
+
+</html>
