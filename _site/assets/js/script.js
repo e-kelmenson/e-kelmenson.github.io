@@ -75,6 +75,7 @@ function typeAndEraseText() {
     }
   }
 }
+
 // Start the typing animation when the page loads
 document.addEventListener('DOMContentLoaded', () => {
   typeAndEraseText();
@@ -155,29 +156,29 @@ filterProjects('all');
 
 
 
-document.getElementById('contactForm').addEventListener('submit', function (event) {
-  event.preventDefault(); // Prevent the form from submitting normally
+// document.getElementById('contactForm').addEventListener('submit', function (event) {
+//   event.preventDefault(); // Prevent the form from submitting normally
 
-  // Collect form data
-  const formData = new FormData(this);
+//   // Collect form data
+//   const formData = new FormData(this);
 
-  // Send form data to your server or form submission service
-  fetch('/your-form-submission-endpoint', {
-    method: 'POST',
-    body: formData,
-  })
-    .then(response => {
-      if (response.ok) {
-        alert('Message sent successfully!');
-        this.reset(); // Clear the form fields
-      } else {
-        alert('Error sending message.');
-      }
-    })
-    .catch(error => {
-      alert('Error sending message: ' + error.message);
-    });
-});
+//   // Send form data to your server or form submission service
+//   fetch('/your-form-submission-endpoint', {
+//     method: 'POST',
+//     body: formData,
+//   })
+//     .then(response => {
+//       if (response.ok) {
+//         alert('Message sent successfully!');
+//         this.reset(); // Clear the form fields
+//       } else {
+//         alert('Error sending message.');
+//       }
+//     })
+//     .catch(error => {
+//       alert('Error sending message: ' + error.message);
+//     });
+// });
 
 
 

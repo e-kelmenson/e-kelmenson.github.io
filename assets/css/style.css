@@ -179,6 +179,7 @@ nav ul.nav-bar li a:hover {
 .right-nav {
   display: flex;
   /* Display the items in a row */
+  margin-right: 50px;
 }
 
 #animatedText {
