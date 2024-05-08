@@ -499,7 +499,7 @@ main {
 
 .section-title h2 {
   font-size: 5em;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .interests-grid {
@@ -601,18 +601,29 @@ footer {
   padding: 10px 20px;
 }
 
+.interests-description {
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 19px; /* Adjust the font size as needed */
+  line-height: 1.6; /* Increase line height for better readability */
+  max-width: 60vw; /* Set a maximum width for the text */
+  margin: auto; /* Center align the text horizontally */
+  padding: 20px 0; /* Add vertical padding for spacing */
+  margin-bottom: 50px;
+}
 
 .scheduler-title {
   width: 100vw;
-  font-size: 24px;
-
+  font-size: 3em;
+  font-family: 'Bebas Neue', sans-serif;
   position: relative;
   /* left: 50%; */
   top: 200px;
   /* margin: auto; */
   /* margin-top: 100px; */
   margin-bottom: 100px;
-
+  font-weight: 400;
+  /* Optional: set the desired font weight */
+  font-style: normal;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -677,3 +688,5 @@ footer {
 .scheduler-fsm img {
   max-width: 60%;
 }
+
+
