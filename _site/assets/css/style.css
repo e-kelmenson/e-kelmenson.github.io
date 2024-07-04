@@ -82,7 +82,7 @@ body {
     );
   background-size: 400% 400%;
   /* Adjust the size of the gradient */
-  animation: iridescent 20s ease-in-out infinite;
+  animation: iridescent 35s ease-in-out infinite;
   /* Animation to shift colors over time */
 
   width: 100vw;
